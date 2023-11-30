@@ -49,7 +49,7 @@ npm i vuepress-plugin-bgm-player2x
 
 目录下的文件中查看
 
-![](file:///D:/npmProject/vuepress-plugin-bgm-player2/images/path.png)
+![](./images/path.png)
 
 ### audios示例
 
