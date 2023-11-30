@@ -1,4 +1,4 @@
-# vuepress-plugin-bgm-player2
+# vuepress-plugin-bgm-player2x
 
 ![demo.png](./images/demo.png)
 
@@ -19,10 +19,10 @@ npm i vuepress-plugin-bgm-player2x
 > 原仓库地址：[vuepress-reco/vuepress-plugin-bgm-player: Bgm player plugin for vuepress-theme-reco or other vuepress theme (github.com)](https://github.com/vuepress-reco/vuepress-plugin-bgm-player)
 > Vuepress 音乐播放器插件
 
-| 使用位置           | 值                                                      |
-| -------------- | ------------------------------------------------------ |
-| plugin name    | vuepress-plugin-bgm-player2x                           |
-| component name | BgMusic（自动出现在页面中，无需添加额外代码） |
+| 使用位置           | 值                            |
+| -------------- | ---------------------------- |
+| plugin name    | vuepress-plugin-bgm-player2x |
+| component name | BgMusic（自动出现在页面中，无需添加额外代码）   |
 
 ## Options
 
