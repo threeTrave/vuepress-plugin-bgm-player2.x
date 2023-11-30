@@ -47,7 +47,9 @@ npm i vuepress-plugin-bgm-player2x
 
 我们默认为你将播放器放在全局根节点下，作为全局组件。（这是符合通常情况下你希望播放器所在位置的）然而我们还帮你将播放器注册名为"BgMusic"的全局组件，你可以在任何地方使用它。这些配置可以在
 
-目录下的文件中查看![77dc382d-e79a-4b6b-be3c-00c12bdf65f5](file:///C:/Users/%E5%93%86%E5%95%A6A%E6%A2%A6/Pictures/Saved%20Pictures/77dc382d-e79a-4b6b-be3c-00c12bdf65f5.png)
+目录下的文件中查看
+
+![](file:///D:/npmProject/vuepress-plugin-bgm-player2/images/path.png)
 
 ### audios示例
 
