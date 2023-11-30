@@ -27,3 +27,4 @@ export const bgmPlayer = (options, context) => ({
   clientConfigFile: path.resolve(__dirname, './bin/enhanceAppFile.js'),
   globalUIComponents: 'BgMusic'
 })
+export default bgmPlayer
