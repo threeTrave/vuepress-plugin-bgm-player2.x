@@ -14,7 +14,7 @@ npm i vuepress-plugin-bgm-player2x
 //导出一个bgmPlayer的对象
 import { bgmPlayer } from 'vuepress-plugin-bgm-player2x'
 //或者我们提供默认导出
-import bgmPlayer from './vuepress-plugin-bgm-player2'
+import bgmPlayer from 'vuepress-plugin-bgm-player2'
 //在plugin下注册它
 ```
 
