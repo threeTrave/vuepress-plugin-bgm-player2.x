@@ -385,7 +385,8 @@ export default {
         this.isMute = true
         this.setVolume(this.$refs.bgm.volume)
         this.$refs.vbar.style.width = 0
-        this.$refs.bgm.volume = 0
+        // this.$refs.bgm.volume = 0
+        fade(this.$refs.bgm, 0, 700)
       } else {
         this.isVolumeBarVisible = !this.isVolumeBarVisible
       }
@@ -397,7 +398,8 @@ export default {
       if (this.getVolume()) {
         const percent = this.getVolume()
         this.$refs.vbar.style.width = percent * 100 + '%'
-        this.$refs.bgm.volume = percent
+        // this.$refs.bgm.volume = percent
+        fade(this.$refs.bgm, percent, 700)
       } else {
         this.$refs.vbar.style.width = '100%'
         this.$refs.bgm.volume = 1
