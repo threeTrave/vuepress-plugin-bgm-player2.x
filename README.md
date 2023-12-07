@@ -13,6 +13,7 @@
 - ***2023/12/07***
   
   - 增加音乐的淡入淡出效果，切换更自然
+  - 新增`defaultVolume`参数控制默认音量
 
 ## 快速开始
 
@@ -56,16 +57,17 @@ import bgmPlayer from 'vuepress-plugin-bgm-player2x'
 
 ### Attributes
 
-| 参数            | 说明            | 类型      | 默认值                                                  | 可选值            |
-| ------------- | ------------- | ------- | ---------------------------------------------------- | -------------- |
-| rootComponent | (新增)是否注册为区根组件 | Boolean | true                                                 | true/false     |
-| audios        | 播放列表          | Array   | 无                                                    | -              |
-| position      | 播放器位置         | Object  | { left: '10px', bottom: '10px', 'z-index': '999999'} | -              |
-| autoplay      | 是否自动播放        | Boolean | false                                                | true/false     |
-| autoShrink    | 是否自动缩小        | Boolean | false                                                | true/false     |
-| shrinkMode    | 指定PC端缩小为哪种模式  | String  | 'float'                                              | 'mini'/'float' |
-| floatPosition | 指定浮窗模式浮动在哪一侧  | String  | 'left'                                               | 'left'/'right' |
-| floatStyle    | 浮窗的样式         | Object  | { bottom: '200px', 'z-index': '999999' }             | -              |
+| 参数            | 说明            | 类型      | 默认值                                                  | 可选值                           |
+| ------------- | ------------- | ------- | ---------------------------------------------------- | ----------------------------- |
+| defaultVolume | (新增)默认音量      | Float   | 0.75                                                 | [0, 1]                        |
+| rootComponent | (新增)是否注册为区根组件 | Boolean | true                                                 | true/false                    |
+| audios        | 播放列表          | Array   | 无                                                    | - |
+| position      | 播放器位置         | Object  | { left: '10px', bottom: '10px', 'z-index': '999999'} | -                             |
+| autoplay      | 是否自动播放        | Boolean | false                                                | true/false                    |
+| autoShrink    | 是否自动缩小        | Boolean | false                                                | true/false                    |
+| shrinkMode    | 指定PC端缩小为哪种模式  | String  | 'float'                                              | 'mini'/'float'                |
+| floatPosition | 指定浮窗模式浮动在哪一侧  | String  | 'left'                                               | 'left'/'right'                |
+| floatStyle    | 浮窗的样式         | Object  | { bottom: '200px', 'z-index': '999999' }             | -                             |
 
 ### 
 

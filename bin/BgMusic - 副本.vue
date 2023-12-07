@@ -124,6 +124,9 @@ export default {
     Lyric
   },
   mounted() {
+    // window.onbeforeunload = async e => {
+    //   await fade(this.$refs.bgm, 0, 500)
+    // }
     if (this.floatPosition === 'left') {
       this.floatStyle = {
         ...this.floatStyle,
@@ -172,7 +175,8 @@ export default {
       isVolumeBarVisible: false,
       isLyricVisible: true,
       isDurationVisible: false,
-      isMobile: false
+      isMobile: false,
+      defaultVolume: DEFAULT_VOLUME
     }
   },
   watch: {
@@ -198,16 +202,16 @@ export default {
     isVolumeBarVisible: function (newV) {
       if (!!!this.$refs.hoverBar) return
       if (newV) {
+        let percent
         // this.$nextTick()
         // this.$refs.hoverBar.style.isvisible = 'visible'
         if (this.getVolume()) {
-          const percent = this.getVolume()
-          this.$refs.vbar.style.width = percent * 100 + '%'
+          percent = this.getVolume()
         } else {
           // TODO:
-          const vbar_width = this.$refs.bgm.volume * 100 + '%'
-          this.$refs.vbar.style.width = vbar_width
+          percent = this.defaultVolume
         }
+        this.$refs.vbar.style.width = percent * 100 + '%'
       }
     }
   },
@@ -230,16 +234,20 @@ export default {
     playReady() {
       // 第一次加载时初始化音量条并处理自动播放事件
       if (this.firstLoad) {
-        if (this.getVolume()) {
-          const percent = this.getVolume()
-          // this.$refs.vbar.style.width = percent * 100 + "%";
-          // TODO:
-          this.$refs.bgm.volume = percent
-          // } else {
-          //   const vbar_width = this.$refs.bgm.volume * 100 + "%";
-          //   this.$refs.vbar.style.width = vbar_width;
-          // }
-        }
+        // if (this.getVolume()) {
+        //   const percent = this.getVolume()
+        //   // this.$refs.vbar.style.width = percent * 100 + "%";
+        //   // TODO:
+        //   this.$refs.bgm.volume = percent
+        //   // } else {
+        //   //   const vbar_width = this.$refs.bgm.volume * 100 + "%";
+        //   //   this.$refs.vbar.style.width = vbar_width;
+        //   // }
+        // } else {
+        //   this.$refs.bgm.volume = this.defaultVolume
+
+        // }
+        this.setVolume(this.defaultVolume)
         this.firstLoad = false
         // 自动播放的处理
         if (this.autoplay) {
