@@ -1,4 +1,4 @@
-import BgMusic from './BgMusic.vue'
+import BgMusic from './BgMusic - 副本.vue'
 // export default ({ Vue }) => {
 //   Vue.component('BgMusic', BgMusic)
 // }

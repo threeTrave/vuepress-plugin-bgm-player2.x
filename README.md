@@ -1,8 +1,20 @@
 # vuepress-plugin-bgm-player2x
 
-![demo.png](./images/demo.png)
+![](./images/example2.png)
 
-## 如何开始
+![](./images/example3.png)
+
+## 更新日志
+
+- ***2023/12/05***
+  
+  - 修复了更改进度条时歌词的不匹配
+
+- ***2023/12/07***
+  
+  - 增加音乐的淡入淡出效果，切换更自然
+
+## 快速开始
 
 ```
 npm i vuepress-plugin-bgm-player2x
@@ -20,11 +32,15 @@ import bgmPlayer from 'vuepress-plugin-bgm-player2x'
 
 
 
-## Details
+## 细节
 
-> Bgm player plugin for vuepress-theme-reco or other vuepress theme2.x.  
-> 
 > 基于@vuepress-reco/vuepress-plugin-bgm-player对reco2.x的适配版本。
+> 
+> 主题色基于reco主题进行适配。其他主题使用可能会报错，需要修改样式文件。
+> 
+> 可移动的歌词轮播(目前只支持网易云id导入)
+> 
+> 移动端初步适配
 > 
 > 原仓库地址：[vuepress-reco/vuepress-plugin-bgm-player: Bgm player plugin for vuepress-theme-reco or other vuepress theme (github.com)](https://github.com/vuepress-reco/vuepress-plugin-bgm-player)
 > Vuepress 音乐播放器插件
@@ -51,15 +67,17 @@ import bgmPlayer from 'vuepress-plugin-bgm-player2x'
 | floatPosition | 指定浮窗模式浮动在哪一侧  | String  | 'left'                                               | 'left'/'right' |
 | floatStyle    | 浮窗的样式         | Object  | { bottom: '200px', 'z-index': '999999' }             | -              |
 
+### 
+
 ### rootComponent说明
 
 
 
-我们默认为你将播放器放在全局根节点下，作为全局组件。（这是符合通常情况下你希望播放器所在位置的）然而我们还帮你将播放器注册名为"BgMusic"的全局组件，你可以在任何地方使用它。这些配置可以在
+我们默认为你将播放器放在全局根节点下，类似全局组件。（这是符合通常情况下你希望播放器所在位置的）除此之外我们还帮你将播放器注册名为"BgMusic"的全局组件，你可以在任何地方使用它。这些配置可以在
 
 目录下的文件中查看
 
-![](./images/path.png)
+`projectHome > node_modules > vuepress-plugin-bgm-player2x>bin>enhanceAppFile.js`
 
 ### audios示例
 
@@ -67,9 +85,11 @@ import bgmPlayer from 'vuepress-plugin-bgm-player2x'
 
 - 无默认值必须配置
 
+- audio可以是一个包含本地歌曲信息的对象，或网易云歌曲的id(String)（歌曲信息会自动根据网易云id联网获取）
+
 - 示例
   
-  ```
+  ```js
   audios: [
     // 本地文件示例
     {
@@ -91,6 +111,10 @@ import bgmPlayer from 'vuepress-plugin-bgm-player2x'
       url: 'https://assets.smallsunnyfox.com/music/3.mp3',
       cover: 'https://assets.smallsunnyfox.com/music/3.jpg'
     }
+    //网易云id实例
+    {
+      audioID: '517567145'
+    }
   ]  
   ```
   
@@ -100,10 +124,24 @@ import bgmPlayer from 'vuepress-plugin-bgm-player2x'
 
 - 移动端默认缩小为浮窗模式
 
+### 网易云id说明
+
+可以通过网页版获取歌曲外链的方式获得相关歌曲的id
+
+<img src="./images/wyy.png" title="" alt="" style="zoom:50%;">
+
+<img src="./images/wyy2.png" title="" alt="" style="zoom:50%;">
+
+### 滚动歌词说明
+
+- 可拖拽移动
+
+- 可隐藏开启
+
+- 移动端隐藏
+
 ## About
 
 - **兼容性**：vuepress-plugin-bgm-player是使用HTML5的Audio开发，故兼容性与Audio的兼容性相关
 - 对于 `vuepress-theme-reco` 的 `dark` 模式的适配  
   ![dark.png](./images/dark.png)
-- **开发计划**
-  - 移动端适配问题修复

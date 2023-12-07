@@ -13,6 +13,9 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  animation: my-scale 1s ease-out forwards;
+
+
 }
 
 .reco-bgm-volume1:before {

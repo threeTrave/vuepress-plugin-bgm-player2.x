@@ -1,0 +1,28 @@
+@import url('@vuepress-reco/tailwindcss-config/lib/client/styles/tailwindcss-base.css');
+
+*{
+    @apply p-0 m-0 list-none;
+}
+.lyric-container{
+    @apply w-screen;
+.lyric{
+    @apply cursor-move font-serif  w-2/5 h-20 fixed left-96 hover:bg-zinc-700/50 truncate text-reco-primary font-semibold;
+    text-shadow: 1px 0 10px pink;
+    user-select:none;
+    bottom: 0px;
+    z-index: 1000;
+    .each{
+        @apply h-20 text-center;
+        line-height: 5rem;
+    }
+    .choose{
+        @apply h-20 text-3xl;
+        line-height: 5rem;
+    }
+    .temp{
+        @apply h-20 text-3xl text-center;
+        /* @apply h-20 text-center; */
+        line-height: 5rem;
+    }
+}
+}

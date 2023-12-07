@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "reco-bgm-add"; /* Project id  */
+  src: url('iconfont.ttf?t=1701522916514') format('truetype');
+}
+
+.reco-bgm-add {
+  font-family: "reco-bgm-add" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.reco-bgm-add-lyric:before {
+  content: "\e727";
+}
+
